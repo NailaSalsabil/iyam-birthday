@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iyam Special Day</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="particles"></div>
+
+<div class="butterflies">
+    <div class="butterfly butterfly1">🦋</div>
+    <div class="butterfly butterfly2">🦋</div>
+    <div class="butterfly butterfly3">🦋</div>
+    <div class="butterfly butterfly4">🦋</div>
+</div>
+
+<audio id="bgMusic" loop>
+    <source src="music/kasih-putih.mp3" type="audio/mpeg">
+</audio>
+
+
+<section id="passwordPage" class="page active">
+    <div class="glass-card">
+
+        <p class="small-text">A LITTLE SURPRISE FOR YOU</p>
+
+        <h1>Iyam</h1>
+
+        <p>Password : usia aku dan kamu  ♡</p>
+
+        <input
+            type="password"
+            id="passwordInput"
+            placeholder="Password"
+        >
+
+        <button onclick="checkPassword()">
+            Open
+        </button>
+
+        <p id="passwordMessage"></p>
+
+    </div>
+</section>
+
+
+<section id="birthdayChoice" class="page">
+    <div class="glass-card">
+
+        <p class="small-text">ONE MORE THING</p>
+
+        <h2>When is your birthday?</h2>
+
+        <p>Choose the correct date ♡</p>
+
+        <div class="date-options">
+
+            <button onclick="checkDate('29/09/2005')">
+                29/09/2005
+            </button>
+
+            <button onclick="checkDate('2005/29/2006')">
+                2005/29/2006
+            </button>
+
+            <button onclick="checkDate('09/29/2005')">
+                09/29/2005
+            </button>
+
+            <button onclick="checkDate('09/29/2006')">
+                09/29/2006
+            </button>
+
+        </div>
+
+        <p id="dateMessage"></p>
+
+    </div>
+</section>
+
+
+<section id="successPage" class="page">
+    <div class="glass-card">
+
+        <div class="success-heart">♡</div>
+
+        <h1>Yeay!</h1>
+
+        <p>You got it right.</p>
+
+        <p>Sekarang, mari kita mulai surprise kecilnya</p>
+
+        <button onclick="showPage('countdownPage')">
+            Continue
+        </button>
+
+    </div>
+</section>
+
+
+<section id="countdownPage" class="page">
+    <div>
+
+        <p class="small-text">SOMETHING SPECIAL IS COMING</p>
+
+        <h1>Iyam's Special Day</h1>
+
+        <p>is coming...</p>
+
+        <div class="countdown">
+
+            <div class="time-box">
+                <span id="days">00</span>
+                <small>Days</small>
+            </div>
+
+            <div class="time-box">
+                <span id="hours">00</span>
+                <small>Hours</small>
+            </div>
+
+            <div class="time-box">
+                <span id="minutes">00</span>
+                <small>Minutes</small>
+            </div>
+
+            <div class="time-box">
+                <span id="seconds">00</span>
+                <small>Seconds</small>
+            </div>
+
+        </div>
+
+        <button onclick="showPage('cakePage')">
+            I'm Ready ♡
+        </button>
+
+    </div>
+</section>
+
+
+<section id="cakePage" class="page">
+    <div>
+
+        <p class="small-text">MAKE A WISH</p>
+
+        <h2>Happy Birthday, Iyam</h2>
+
+        <div class="cake">
+
+            <div class="candle" id="candle">
+                <div class="flame" id="flame"></div>
+            </div>
+
+            <div class="cake-top"></div>
+
+            <div class="cake-body"></div>
+
+            <div class="cake-bottom"></div>
+
+        </div>
+
+        <p id="candleText">
+            Click lilinnya ♡
+        </p>
+
+    </div>
+</section>
+
+
+<section id="childhoodPage" class="page">
+    <div>
+
+        <p class="small-text">A LITTLE PIECE OF YOUR STORY</p>
+
+        <h2>Look at you...</h2>
+
+        <div class="polaroid">
+
+            <img
+                src="images/childhood.jpg"
+                alt="Childhood photo"
+            >
+
+            <p>
+                Seseorang yang telah tumbuh menjadi sosok yang sangat istimewa.
+            </p>
+
+        </div>
+
+        <button onclick="showPage('messagePage')">
+            Continue ♡
+        </button>
+
+    </div>
+</section>
+
+
+<section id="messagePage" class="page">
+    <div class="typing-box">
+
+        <p class="small-text">WORDS FROM MY HEART</p>
+
+        <h2>For You</h2>
+
+        <p id="typingText"></p>
+
+        <button
+            id="messageNext"
+            class="hidden"
+            onclick="showPage('memoryPage')"
+        >
+            Our Memories
+        </button>
+
+    </div>
+</section>
+
+
+<section id="memoryPage" class="page">
+    <div>
+
+        <p class="small-text">OUR LITTLE MEMORIES</p>
+
+        <h2>Our Memories</h2>
+
+        <div class="memory-grid">
+
+            <div class="memory-photo">
+                <img src="images/memory1.jpg" alt="Memory 1">
+            </div>
+
+            <div class="memory-photo">
+                <img src="images/memory2.jpg" alt="Memory 2">
+            </div>
+
+            <div class="memory-photo">
+                <img src="images/memory3.jpg" alt="Memory 3">
+            </div>
+
+            <div class="memory-photo">
+                <img src="images/memory4.jpg" alt="Memory 4">
+            </div>
+
+            <div class="memory-photo">
+                <img src="images/memory5.jpg" alt="Memory 5">
+            </div>
+
+            <div class="memory-photo">
+                <img src="images/memory6.jpg" alt="Memory 6">
+            </div>
+
+            <div class="memory-photo">
+                <img src="images/memory7.jpg" alt="Memory 7">
+            </div>
+
+            <div class="memory-photo">
+                <img src="images/memory8.jpg" alt="Memory 8">
+            </div>
+
+        </div>
+
+        <button onclick="showPage('videoPage')">
+            Masih ada satu lagi ♡
+        </button>
+
+    </div>
+</section>
+
+
+<section id="videoPage" class="page">
+    <div class="video-frame">
+
+        <p class="small-text">A MOMENT FOR YOU</p>
+
+        <h2>A Moment For You</h2>
+
+        <video controls>
+            <source src="video/moment.mp4" type="video/mp4">
+        </video>
+
+        <button onclick="showPage('wishPage')">
+            Continue ♡
+        </button>
+
+    </div>
+</section>
+
+
+<section id="wishPage" class="page">
+    <div class="wish-content">
+
+        <p class="small-text">A WISH FOR YOU</p>
+
+        <h1>Happy 21st Birthday</h1>
+
+        <div id="wishTypingText" class="wish-text"></div>
+
+        <button
+            id="wishNext"
+            class="hidden"
+            onclick="showPage('finalPage')"
+        >
+            Final Surprise
+        </button>
+
+    </div>
+</section>
+
+
+<section id="finalPage" class="page">
+    <div class="final-content">
+
+        <p class="small-text">FOR THE PERSON I LOVE</p>
+
+        <h1>Happy Birthday, Sayang.</h1>
+
+        <div class="final-heart">♡</div>
+
+        <h2>With All My Love</h2>
+
+        <h2>Always & Forever</h2>
+
+    </div>
+</section>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

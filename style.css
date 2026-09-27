@@ -1,0 +1,461 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #0b090d;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.page {
+    display: none;
+    min-height: 100vh;
+    padding: 40px 20px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.page.active {
+    display: flex;
+}
+
+h1 {
+    font-family: Georgia, serif;
+    font-size: 45px;
+}
+
+h2 {
+    font-family: Georgia, serif;
+    font-size: 30px;
+}
+
+p {
+    line-height: 1.7;
+}
+
+.small-text {
+    color: #c9aebc;
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+button {
+    background: #241c23;
+    color: white;
+    border: 1px solid #8f7180;
+    border-radius: 25px;
+    padding: 12px 22px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: #4a3542;
+    transform: translateY(-2px);
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    border-radius: 20px;
+    border: 1px solid #8f7180;
+    background: #151217;
+    color: white;
+    text-align: center;
+}
+
+.glass-card {
+    width: 400px;
+    max-width: 95%;
+    padding: 40px 25px;
+    background: rgba(21, 18, 23, 0.94);
+    border: 1px solid #44333e;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+.date-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.date-options button {
+    margin-top: 0;
+}
+
+.success-heart {
+    font-size: 80px;
+    margin-bottom: 10px;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 35px 0;
+}
+
+.time-box {
+    border-top: 1px solid #8f7180;
+    border-bottom: 1px solid #8f7180;
+    padding: 15px;
+    min-width: 70px;
+}
+
+.time-box span {
+    display: block;
+    font-size: 30px;
+}
+
+.time-box small {
+    color: #a997a0;
+}
+
+.cake {
+    width: 200px;
+    margin: 50px auto 30px;
+}
+
+.candle {
+    width: 15px;
+    height: 55px;
+    background: white;
+    margin: auto;
+    position: relative;
+    cursor: pointer;
+}
+
+.flame {
+    width: 15px;
+    height: 20px;
+    background: #fff2b0;
+    border-radius: 50%;
+    position: absolute;
+    top: -20px;
+    animation: flameMove 0.7s ease-in-out infinite alternate;
+}
+
+.flame.off {
+    display: none;
+}
+
+@keyframes flameMove {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(0.8);
+    }
+}
+
+.cake-top {
+    height: 25px;
+    background: #d2b1bd;
+    border-radius: 50%;
+}
+
+.cake-body {
+    height: 80px;
+    background: #a77c8d;
+}
+
+.cake-bottom {
+    height: 35px;
+    background: #765463;
+}
+
+.polaroid {
+    background: white;
+    padding: 10px 10px 20px;
+    width: 300px;
+    max-width: 90%;
+    margin: 35px auto;
+    transform: rotate(-3deg);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.45);
+    transition: 0.4s ease;
+}
+
+.polaroid:hover {
+    transform: rotate(0deg) scale(1.03);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.55);
+}
+
+.polaroid img {
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+}
+
+.polaroid p {
+    color: #222;
+    margin-top: 12px;
+    font-family: Georgia, serif;
+    font-size: 15px;
+}
+
+.typing-box {
+    max-width: 650px;
+    margin: 30px auto;
+}
+
+#typingText {
+    font-family: Georgia, serif;
+    font-size: 21px;
+    line-height: 1.8;
+    white-space: pre-line;
+    margin-top: 25px;
+}
+
+.memory-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 850px;
+    margin: 40px auto;
+    padding: 10px;
+}
+
+.memory-photo {
+    position: relative;
+    background: white;
+    padding: 7px 7px 12px;
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.4);
+    transition: 0.4s ease;
+}
+
+.memory-photo:nth-child(1) {
+    transform: rotate(-3deg);
+}
+
+.memory-photo:nth-child(2) {
+    transform: rotate(2deg);
+}
+
+.memory-photo:nth-child(3) {
+    transform: rotate(-2deg);
+}
+
+.memory-photo:nth-child(4) {
+    transform: rotate(3deg);
+}
+
+.memory-photo:nth-child(5) {
+    transform: rotate(2deg);
+}
+
+.memory-photo:nth-child(6) {
+    transform: rotate(-3deg);
+}
+
+.memory-photo:nth-child(7) {
+    transform: rotate(3deg);
+}
+
+.memory-photo:nth-child(8) {
+    transform: rotate(-2deg);
+}
+
+.memory-photo:hover {
+    transform: rotate(0deg) scale(1.06);
+    z-index: 5;
+}
+
+.memory-photo img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.video-frame {
+    max-width: 800px;
+    margin: 30px auto;
+}
+
+.video-frame video {
+    width: 100%;
+    max-height: 600px;
+    margin-top: 20px;
+}
+
+.wish-content {
+    max-width: 700px;
+}
+
+.wish-text {
+    margin-top: 30px;
+    color: #d0c4ca;
+    white-space: pre-line;
+    font-family: Georgia, serif;
+    font-size: 19px;
+    line-height: 1.9;
+}
+
+.final-content h2 {
+    margin-top: 20px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.final-heart {
+    font-size: 40px;
+    margin: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* SALJU / BINTANG */
+
+.particle {
+    position: fixed;
+    width: 4px;
+    height: 4px;
+    background: white;
+    border-radius: 50%;
+    top: -10px;
+    animation: snow 8s linear infinite;
+    pointer-events: none;
+    z-index: 1;
+}
+
+@keyframes snow {
+    to {
+        transform: translateY(110vh);
+    }
+}
+
+
+/* KUPU-KUPU */
+
+.butterflies {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.butterfly {
+    position: absolute;
+    font-size: 28px;
+    opacity: 0.75;
+    animation: fly 12s ease-in-out infinite;
+}
+
+.butterfly1 {
+    top: 20%;
+    left: 5%;
+    animation-delay: 0s;
+}
+
+.butterfly2 {
+    top: 65%;
+    left: 85%;
+    font-size: 22px;
+    animation-delay: 3s;
+}
+
+.butterfly3 {
+    top: 35%;
+    left: 75%;
+    font-size: 32px;
+    animation-delay: 6s;
+}
+
+.butterfly4 {
+    top: 75%;
+    left: 15%;
+    font-size: 20px;
+    animation-delay: 9s;
+}
+
+@keyframes fly {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    25% {
+        transform: translate(40px, -30px) rotate(8deg);
+    }
+
+    50% {
+        transform: translate(-20px, -60px) rotate(-8deg);
+    }
+
+    75% {
+        transform: translate(50px, -20px) rotate(6deg);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+}
+
+
+/* TAMPILAN HP */
+
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 35px;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    .date-options {
+        grid-template-columns: 1fr;
+    }
+
+    .countdown {
+        gap: 5px;
+    }
+
+    .time-box {
+        min-width: 60px;
+        padding: 10px 5px;
+    }
+
+    .time-box span {
+        font-size: 25px;
+    }
+
+    .memory-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    .memory-photo img {
+        height: 140px;
+    }
+
+    #typingText {
+        font-size: 18px;
+    }
+
+    .wish-text {
+        font-size: 17px;
+    }
+
+    .butterfly {
+        font-size: 22px;
+    }
+}
